@@ -1,0 +1,272 @@
+@import url("https://fonts.googleapis.com/css?family=Bangers");
+html {
+  font-family: 'Bangers', cursive;
+  letter-spacing: .5px;
+  word-spacing: 2px;
+  color: #cd5c5c;
+  background-color: #f5fffa;
+  font-size: 16px;
+  width: 100%;
+  overflow-x: hidden; }
+  @media (max-width: 960px) {
+    html {
+      font-size: 18px; } }
+  @media (min-width: 1360px) {
+    html {
+      font-size: 18px; } }
+  @media (min-width: 1440px) {
+    html {
+      font-size: 19px; } }
+  @media (min-width: 1600px) {
+    html {
+      font-size: 20px; } }
+  @media (min-width: 1920px) {
+    html {
+      font-size: 21px; } }
+
+a {
+  color: inherit;
+  text-decoration: none; }
+
+.htmlLike {
+  white-space: pre-line; }
+
+.hidden {
+  display: none; }
+
+.shown {
+  display: block; }
+
+.text-center {
+  text-align: center; }
+
+nav {
+  width: 94%;
+  padding: 0 3%;
+  color: #f5fffa;
+  background-color: #cd5c5c;
+  position: fixed;
+  top: 0;
+  z-index: 200000; }
+  nav h1 {
+    float: left; }
+  nav .clear {
+    clear: both; }
+  nav ul {
+    list-style: none;
+    float: right; }
+    nav ul li {
+      display: inline-block;
+      padding: 1em;
+      transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+      nav ul li:hover {
+        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        background-color: #f5fffa;
+        color: #cd5c5c; }
+
+h2 {
+  text-align: center; }
+
+.welcome {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-image: url("https://picsum.photos/1280/720/?random");
+  background-color: #f5deb3; }
+
+.noFlex {
+  display: block !important; }
+
+.topArtists, .artistTopAlbumsDetails {
+  width: 93%;
+  margin: 0;
+  text-align: center;
+  padding: 2.5% 3.5% 3.5%; }
+  .topArtists .artist, .artistTopAlbumsDetails .artist {
+    position: relative;
+    overflow: hidden;
+    width: 10vw;
+    min-width: 10vw;
+    min-height: 10vw;
+    margin-bottom: -0.5em;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 0 solid #cd5c5c;
+    background-color: #cd5c5c;
+    transition: ease-in-out .3s border,ease-in-out .3s transform; }
+    .topArtists .artist:hover, .artistTopAlbumsDetails .artist:hover {
+      border: 0.3em solid #cd5c5c;
+      font-size: 60%;
+      transition: ease-in-out .3s border,ease-in-out .3s transform;
+      z-index: 1000;
+      transform: scale(1.7);
+      margin: -0.75em 0 -0.25em; }
+      .topArtists .artist:hover span, .artistTopAlbumsDetails .artist:hover span {
+        border: 0.3em solid #cd5c5c;
+        bottom: -0.3em;
+        right: -0.3em; }
+    .topArtists .artist img, .artistTopAlbumsDetails .artist img {
+      width: 100%;
+      height: 100%;
+      margin-bottom: -0.5em; }
+    .topArtists .artist span, .artistTopAlbumsDetails .artist span {
+      margin: 0;
+      max-width: 80%;
+      position: absolute;
+      bottom: -5em;
+      right: -5em;
+      padding: .3em;
+      text-align: right;
+      background-color: #f5fffa;
+      color: #cd5c5c;
+      transition: ease-in-out .3s bottom, ease-in-out .3s right;
+      height: auto;
+      width: auto;
+      max-width: 100%; }
+
+.artistDetails, .albumDetails, .tagDetails {
+  width: 93%;
+  margin: 0;
+  padding: 0 3.5%; }
+  .artistDetails a span, .albumDetails a span, .tagDetails a span {
+    padding: .5em;
+    transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+    .artistDetails a span:hover, .albumDetails a span:hover, .tagDetails a span:hover {
+      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      color: #f5fffa;
+      background-color: #cd5c5c; }
+  .artistDetails .profilePic, .albumDetails .profilePic, .tagDetails .profilePic {
+    border-radius: 50%;
+    float: right;
+    height: 300px;
+    width: auto;
+    margin: 2em 10em 0 2em;
+    border: 0.3em solid #f5fffa;
+    box-sizing: border-box; }
+  .artistDetails div, .albumDetails div, .tagDetails div {
+    min-height: calc(150px - 2em);
+    padding: 1em 2em; }
+    .artistDetails div h3, .albumDetails div h3, .tagDetails div h3,
+    .artistDetails div h4,
+    .albumDetails div h4,
+    .tagDetails div h4 {
+      margin: .5em 0;
+      padding: 0; }
+  .artistDetails .upper, .albumDetails .upper, .tagDetails .upper {
+    background: #f5deb3;
+    min-height: calc(150px - 2em);
+    padding: 1em 2em; }
+    .artistDetails .upper h3, .albumDetails .upper h3, .tagDetails .upper h3 {
+      font-size: 200%;
+      margin: .25em 0; }
+  .artistDetails .bio, .albumDetails .bio, .tagDetails .bio {
+    clear: both; }
+    .artistDetails .bio h3, .albumDetails .bio h3, .tagDetails .bio h3 {
+      text-align: center; }
+    .artistDetails .bio #content, .albumDetails .bio #content, .tagDetails .bio #content,
+    .artistDetails .bio #summary,
+    .albumDetails .bio #summary,
+    .tagDetails .bio #summary {
+      background-color: #f5deb3; }
+      .artistDetails .bio #content a, .albumDetails .bio #content a, .tagDetails .bio #content a,
+      .artistDetails .bio #summary a,
+      .albumDetails .bio #summary a,
+      .tagDetails .bio #summary a {
+        color: #f5fffa; }
+    .artistDetails .bio button, .albumDetails .bio button, .tagDetails .bio button {
+      color: #f5deb3;
+      background-color: #cd5c5c;
+      border: none;
+      width: 12em;
+      padding: 1em;
+      margin-top: 2em;
+      margin-left: calc( 50% - 6em);
+      cursor: pointer;
+      transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+      .artistDetails .bio button:hover, .albumDetails .bio button:hover, .tagDetails .bio button:hover {
+        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        background-color: #f5deb3;
+        color: #cd5c5c; }
+
+.artistTopAlbumsDetails {
+  margin: 0;
+  padding: .5% 0;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: nowrap;
+  transform: scale(1);
+  overflow-x: scroll;
+  -webkit-overflow-scrolling: touch; }
+  .artistTopAlbumsDetails .artist {
+    width: calc( 100vw / 6);
+    margin: 0; }
+    .artistTopAlbumsDetails .artist:hover {
+      font-size: 100%;
+      transform: scale(1);
+      margin: 0; }
+
+.artistTopTracksDetails, .topTracksDetails {
+  width: 93%;
+  margin: 3% auto 6%;
+  max-height: 20em;
+  overflow-y: auto;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap; }
+  .artistTopTracksDetails span, .topTracksDetails span {
+    display: inline-block;
+    padding: .2em .5em;
+    transition: ease-in-out .3s background-color,ease-in-out .3s color;
+    cursor: pointer; }
+    .artistTopTracksDetails span:hover, .topTracksDetails span:hover {
+      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      color: #f5fffa;
+      background-color: #cd5c5c; }
+
+.albumDetails .upper span:first-child {
+  font-size: 150%; }
+
+.albumDetails .upper span:last-child {
+  font-size: 200%;
+  padding: .25em;
+  cursor: pointer;
+  transition: ease-in-out .6s background-color,ease-in-out .3s color; }
+  .albumDetails .upper span:last-child:hover {
+    transition: ease-in-out .6s background-color,ease-in-out .3s color;
+    background-color: #cd5c5c;
+    color: #f5deb3; }
+
+.albumDetails .tracks ol {
+  max-width: 80%;
+  margin: 0 auto;
+  cursor: pointer; }
+  .albumDetails .tracks ol li {
+    padding: .15em;
+    transition: ease-in-out .6s background-color,ease-in-out .3s color; }
+    .albumDetails .tracks ol li:hover {
+      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      background-color: #cd5c5c;
+      color: #f5fffa; }
+
+.topTags span {
+  padding: .25em;
+  display: inline-block;
+  width: calc( 100% / 5);
+  text-align: right; }
+
+.tagDetails div {
+  min-height: 0; }
+
+.topTracksDetails {
+  max-height: none;
+  font-size: 110%; }
+  .topTracksDetails span {
+    padding: .5em; }
+
+.searchBox {
+  text-align: center; }
+  .searchBox input {
+    text-align: center;
+    padding: 0.25em 1em;
+    width: 60%; }
