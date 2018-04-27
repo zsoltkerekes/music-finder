@@ -107,7 +107,7 @@ export class ArtistTopAlbumsDetails extends Component {
               {
                 this.albums().map(
                   (album, index) =>
-                    (<Link to={`/album-details/${this.props.artistName}/${album.name}`} key={index}>
+                    (<Link to={escape(`/album-details/${this.props.artistName}/${album.name}`)} key={index}>
                       <span className="artist">
                         <img
                           src={this.imageSrc(album)}

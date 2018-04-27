@@ -32,12 +32,15 @@ export class TagDetails extends Component {
     document.getElementById('summary').className = 'htmlLike hidden';
     document.getElementById('content').className = 'htmlLike shown';
     document.getElementById('showButton').className = 'hidden';
+    document.getElementById('hideButton').className = 'shown';
   }
 
   hideFullTag = () => {
     document.getElementById('content').className = 'htmlLike hidden';
     document.getElementById('summary').className = 'htmlLike shown';
     document.getElementById('showButton').className = 'shown';
+    document.getElementById('hideButton').className = 'hidden';
+    document.documentElement.scrollTop = 0;
   }
 
   render () {
@@ -62,6 +65,10 @@ export class TagDetails extends Component {
             {this.state.result.tag.wiki.content &&
             this.state.result.tag.wiki.content.slice(0, -130) !== this.state.result.tag.wiki.summary.slice(0, -25) ?
               <button id="showButton" onClick={this.showFullTag}>Show Full Info</button> : null}
+            {this.state.result.tag.wiki.content &&
+            this.state.result.tag.wiki.content.slice(0, -130) !== this.state.result.tag.wiki.summary.slice(0, -25) ?
+              <button id="hideButton" className="hidden" onClick={this.hideFullTag}>Hide Full Info</button> : null}
+
 
           </div>
 

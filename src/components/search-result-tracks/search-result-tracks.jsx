@@ -38,17 +38,25 @@ export class SearchResultTracks extends Component {
           <h2 className="text-center">
           Results for {'"' + this.props.phrase + '"'} in Tracks
           </h2>
-          <section className="artistTopTracksDetails">
-            {
-              this.state.result.results.trackmatches.track
-                .map(
-                  (track, index) =>
-                    (<span key={index} onClick={() => this.listen(track.artist, track.name)}>
-                      {track.name}
-                    </span>)
-                )
-            }
-          </section>
+          {this.state.result.results.trackmatches.track.length > 0 ?
+            <span>
+              <section className="artistTopTracksDetails">
+                {
+                  this.state.result.results.trackmatches.track
+                    .map(
+                      (track, index) =>
+                        (<span key={index} onClick={() => this.listen(track.artist, track.name)}>
+                          {track.name}
+                        </span>)
+                    )
+                }
+              </section>
+            </span> :
+            <span>
+              <h3 className="text-center">
+                  Nothing found
+              </h3>
+            </span>}
         </div>
       );
     } else {

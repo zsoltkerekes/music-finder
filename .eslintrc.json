@@ -45,6 +45,7 @@
                 "object": true
             }
         ],
-        "new-cap":"off"
+        "new-cap":"off",
+        "max-len":["warn",140]
     }
 }

@@ -33,12 +33,15 @@ export class ArtistDetails extends Component {
     document.getElementById('summary').className = 'htmlLike hidden';
     document.getElementById('content').className = 'htmlLike shown';
     document.getElementById('showButton').className = 'hidden';
+    document.getElementById('hideButton').className = 'shown';
   }
 
   hideFullBio = () => {
     document.getElementById('content').className = 'htmlLike hidden';
     document.getElementById('summary').className = 'htmlLike shown';
     document.getElementById('showButton').className = 'shown';
+    document.getElementById('hideButton').className = 'hidden';
+    document.documentElement.scrollTop = 0;
   }
 
   render () {
@@ -70,7 +73,7 @@ export class ArtistDetails extends Component {
                 <span>
                   {this.state.result.artist.tags.tag
                     .map((tag, index) =>
-                      (<Link to={'/tag-details/' + tag.name} key={index}>
+                      (<Link to={'/tag-details/' + escape(tag.name)} key={index}>
                         <span>[ {tag.name} ]</span>
                       </Link>)
                     )}
@@ -84,7 +87,7 @@ export class ArtistDetails extends Component {
                     .map(
                       (similarArtist, index) =>
                         (
-                          <Link to={'/artist-details/' + similarArtist.name} key={index}>
+                          <Link to={'/artist-details/' + escape(similarArtist.name)} key={index}>
                             <span>
                               [ {similarArtist.name} ]
                             </span>
@@ -114,8 +117,11 @@ export class ArtistDetails extends Component {
                   dangerouslySetInnerHTML={{ __html: `${this.state.result.artist.bio.content.slice(0, -130)}` }} /> :
                 null}
               {this.state.result.artist.bio.content &&
-            this.state.result.artist.bio.content.slice(0, -130) !== this.state.result.artist.bio.summary.slice(0, -25) ?
+                this.state.result.artist.bio.content.slice(0, -130) !== this.state.result.artist.bio.summary.slice(0, -25) ?
                 <button id="showButton" onClick={this.showFullBio}>Show Full Biography</button> : null}
+              {this.state.result.artist.bio.content &&
+                this.state.result.artist.bio.content.slice(0, -130) !== this.state.result.artist.bio.summary.slice(0, -25) ?
+                <button id="hideButton" className="hidden" onClick={this.hideFullBio}>Hide Full Biography</button> : null}
             </div> : null}
         </section>
       );

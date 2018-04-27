@@ -9,6 +9,7 @@ import { TopTagsPage } from './containers/top-tags/top-tags-page';
 import { TagDetailsPage } from './containers/tags-details/tag-details-page';
 import { TopTracksPage } from './containers/top-tracks/top-tracks-page';
 import { SearchPage } from './containers/search/search-page';
+import { ToTop } from './components/to-top/to-top';
 
 class App extends Component {
   render () {
@@ -28,6 +29,7 @@ class App extends Component {
             <Route path="/top-tracks" exact component={TopTracksPage} />
           </div>
         </HashRouter>
+        <ToTop />
       </section>
     );
   }

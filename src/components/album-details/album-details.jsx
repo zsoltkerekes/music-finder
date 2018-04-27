@@ -33,12 +33,15 @@ export class AlbumDetails extends Component {
     document.getElementById('summary').className = 'htmlLike hidden';
     document.getElementById('content').className = 'htmlLike shown';
     document.getElementById('showButton').className = 'hidden';
+    document.getElementById('hideButton').className = 'shown';
   }
 
   hideFullInfo = () => {
     document.getElementById('content').className = 'htmlLike hidden';
     document.getElementById('summary').className = 'htmlLike shown';
     document.getElementById('showButton').className = 'shown';
+    document.getElementById('hideButton').className = 'hidden';
+    document.documentElement.scrollTop = 0;
   }
 
   listenAlbum () {
@@ -81,7 +84,7 @@ export class AlbumDetails extends Component {
                   <h4>Tags</h4>
                   {this.state.result.album.tags.tag
                     .map((tag, index) =>
-                      (<Link to={'/tag-details/' + tag.name} key={index}>
+                      (<Link to={'/tag-details/' + escape(tag.name)} key={index}>
                         <span>[ {tag.name} ]</span>
                       </Link>)
                     )}
@@ -130,7 +133,12 @@ export class AlbumDetails extends Component {
                     this.state.result.album.wiki.content ?
                       `${this.state.result.album.wiki.content.slice(0, -130)}` : 'N/A'
                 }} />
-              <button id="showButton" onClick={this.showFullInfo}>Show Full Info</button>
+              {this.state.result.album.wiki.content &&
+                this.state.result.album.wiki.content.slice(0, -130) !== this.state.result.album.wiki.summary.slice(0, -25) ?
+                <button id="showButton" onClick={this.showFullInfo}>Show Full Info</button> : null}
+              {this.state.result.album.wiki.content &&
+                this.state.result.album.wiki.content.slice(0, -130) !== this.state.result.album.wiki.summary.slice(0, -25) ?
+                <button id="hideButton" className="hidden" onClick={this.hideFullInfo}>Hide Full Info</button> : null}
             </div> : null}
 
         </section>
@@ -138,10 +146,10 @@ export class AlbumDetails extends Component {
     } else {
       return (
         <section className="albumDetails noFlex">
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          <br />
+          <br />
           <p>Loading...</p>
           <p>{this.state.result.error ? 'ERROR : ' + this.state.result.error : ''} </p>
           <p>{this.state.result.message ? 'ERROR MESSAGE : ' + this.state.result.message : ''}</p>

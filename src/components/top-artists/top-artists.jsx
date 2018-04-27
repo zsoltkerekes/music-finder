@@ -27,7 +27,7 @@ export class TopArtist extends Component {
           <div className="topArtists">
             {this.state.result.artists.artist.map(
               (artist, index) =>
-                (<Link to={'/artist-details/' + artist.name} key={index}>
+                (<Link to={'/artist-details/' + escape(artist.name)} key={index}>
                   <span className="artist">
                     <img
                       alt={artist.name}

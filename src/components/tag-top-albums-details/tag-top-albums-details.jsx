@@ -90,6 +90,11 @@ export class TagTopAlbumsDetails extends Component {
     }
   }
 
+  scroll = event => {
+    event.preventDefault();
+    document.getElementsByClassName('artistTopAlbumsDetails')[0].scrollLeft += event.deltaY / 2;
+  };
+
   render () {
     if (this.state.result.albums.album) {
       return (
@@ -98,11 +103,11 @@ export class TagTopAlbumsDetails extends Component {
             Top Albums
           </h2>
           <HashRouter>
-            <section className="artistTopAlbumsDetails">
+            <section className="artistTopAlbumsDetails" onWheel={(event) => this.scroll(event)}>
               {
                 this.albums().map(
                   (album, index) =>
-                    (<Link to={`/album-details/${album.artist.name}/${album.name}`} key={index}>
+                    (<Link to={escape(`/album-details/${album.artist.name}/${album.name}`)} key={index}>
                       <span className="artist">
                         <img
                           src={this.imageSrc(album)}

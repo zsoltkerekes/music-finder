@@ -37,25 +37,33 @@ export class SearchResultArtist extends Component {
             <h2>
               Results for {'"' + this.props.phrase + '"'} in Artists
             </h2>
-            {this.state.result.results.artistmatches.artist
-              .filter(
-                artist => artist.image[artist.image.length - 1]['#text'] !== ''
-              )
-              .map(
-                (artist, index) =>
-                  (<Link to={'/artist-details/' + artist.name} key={index}>
-                    <span className="artist">
-                      <img
-                        alt={artist.name}
-                        src={artist.image[artist.image.length - 1]['#text'] !== '' ?
-                          artist.image[artist.image.length - 1]['#text'] : 'assets/image/no-photo.jpg'} />
-                      <span>
-                        {artist.name}
-                      </span>
-                    </span>
-                  </Link>
+            {this.state.result.results.artistmatches.artist.length > 0 ?
+              <span>
+                {this.state.result.results.artistmatches.artist
+                  .filter(
+                    artist => artist.image[artist.image.length - 1]['#text'] !== ''
                   )
-              )}
+                  .map(
+                    (artist, index) =>
+                      (<Link to={'/artist-details/' + escape(artist.name)} key={index}>
+                        <span className="artist">
+                          <img
+                            alt={artist.name}
+                            src={artist.image[artist.image.length - 1]['#text'] !== '' ?
+                              artist.image[artist.image.length - 1]['#text'] : 'assets/image/no-photo.jpg'} />
+                          <span>
+                            {artist.name}
+                          </span>
+                        </span>
+                      </Link>
+                      )
+                  )}
+              </span> :
+              <span>
+                <h3 className="text-center">
+                  Nothing found
+                </h3>
+              </span>}
           </div>
         </HashRouter>
       );

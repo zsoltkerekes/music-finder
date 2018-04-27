@@ -5,6 +5,7 @@ $main-color: #f5fffa;
 @import url( 'https://fonts.googleapis.com/css?family=Bangers');
 
 html {
+  position: relative;
   font-family: 'Bangers', cursive;
   letter-spacing: .5px;
   word-spacing: 2px;
@@ -100,6 +101,26 @@ h2 {
 
 .noFlex {
   display: block !important;
+}
+
+.toTop{
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+  border: 2px solid $main-background-color;
+  color: $main-background-color;
+  background-color: $main-color;
+  padding: 0.5em 0.75em;
+  font-weight: bold;
+  border-radius: 2em;
+  cursor: pointer;
+  transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
+  &:hover {
+    transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
+    border: 2px solid $secondary-background-color;
+    color: $secondary-background-color;
+    background-color: $main-background-color;
+  }
 }
 ///////////////////////
 .topArtists {

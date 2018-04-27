@@ -50,25 +50,33 @@ export class SearchResultAlbums extends Component {
             Results for {'"' + this.props.phrase + '"'} in Albums
           </h2>
           <HashRouter>
-            <section className="artistTopAlbumsDetails" onWheel={(event) => this.scroll(event)}>
-              {
-                this.state.result.results.albummatches.album
-                  .map(
-                    (album, index) =>
-                      (<Link to={`/album-details/${album.artist}/${album.name}`} key={index}>
-                        <span className="artist">
-                          <img
-                            src={this.imageSrc(album)}
-                            alt={album.name}
-                            className="albumPic" />
-                          <span>
-                            {album.name}
-                          </span>
-                        </span>
-                      </Link>)
-                  )
-              }
-            </section>
+            {this.state.result.results.albummatches.album.length > 0 ?
+              <span>
+                <section className="artistTopAlbumsDetails" onWheel={(event) => this.scroll(event)}>
+                  {
+                    this.state.result.results.albummatches.album
+                      .map(
+                        (album, index) =>
+                          (<Link to={escape(`/album-details/${album.artist}/${album.name}`)} key={index}>
+                            <span className="artist">
+                              <img
+                                src={this.imageSrc(album)}
+                                alt={album.name}
+                                className="albumPic" />
+                              <span>
+                                {album.name}
+                              </span>
+                            </span>
+                          </Link>)
+                      )
+                  }
+                </section>
+              </span> :
+              <span>
+                <h3 className="text-center">
+                  Nothing found
+                </h3>
+              </span>}
           </HashRouter>
         </div>
       );
