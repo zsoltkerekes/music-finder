@@ -45,7 +45,7 @@ export class SearchResultArtist extends Component {
                   )
                   .map(
                     (artist, index) =>
-                      (<Link to={'/artist-details/' + escape(artist.name)} key={index}>
+                      (<Link to={'/artist-details/' + encodeURIComponent(artist.name)} key={index}>
                         <span className="artist">
                           <img
                             alt={artist.name}

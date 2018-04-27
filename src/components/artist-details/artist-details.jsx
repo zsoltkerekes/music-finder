@@ -73,7 +73,7 @@ export class ArtistDetails extends Component {
                 <span>
                   {this.state.result.artist.tags.tag
                     .map((tag, index) =>
-                      (<Link to={'/tag-details/' + escape(tag.name)} key={index}>
+                      (<Link to={'/tag-details/' + encodeURIComponent(tag.name)} key={index}>
                         <span>[ {tag.name} ]</span>
                       </Link>)
                     )}
@@ -87,7 +87,7 @@ export class ArtistDetails extends Component {
                     .map(
                       (similarArtist, index) =>
                         (
-                          <Link to={'/artist-details/' + escape(similarArtist.name)} key={index}>
+                          <Link to={'/artist-details/' + encodeURIComponent(similarArtist.name)} key={index}>
                             <span>
                               [ {similarArtist.name} ]
                             </span>

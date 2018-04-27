@@ -40,7 +40,7 @@ export class TagTopArtist extends Component {
             {this.state.result.topartists.artist
               .map(
                 (artist, index) =>
-                  (<Link to={'/artist-details/' + escape(artist.name)} key={index}>
+                  (<Link to={'/artist-details/' + encodeURIComponent(artist.name)} key={index}>
                     <span className="artist">
                       <img
                         alt={artist.name}

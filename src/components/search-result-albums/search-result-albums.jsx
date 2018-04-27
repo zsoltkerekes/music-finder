@@ -57,7 +57,8 @@ export class SearchResultAlbums extends Component {
                     this.state.result.results.albummatches.album
                       .map(
                         (album, index) =>
-                          (<Link to={escape(`/album-details/${album.artist}/${album.name}`)} key={index}>
+                          (<Link to={'/album-details/' + encodeURIComponent(album.artist) + '/' +
+                          encodeURIComponent(album.name)} key={index}>
                             <span className="artist">
                               <img
                                 src={this.imageSrc(album)}

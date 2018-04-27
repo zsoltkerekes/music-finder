@@ -28,7 +28,7 @@ export class TopTags extends Component {
             {this.state.result.toptags.tag
               .map(
                 (tag, index) => (
-                  <Link to={'/tag-details/' + escape(tag.name)} key={index}>
+                  <Link to={'/tag-details/' + encodeURIComponent(tag.name)} key={index}>
                     <span>
                       [ {tag.name} ]
                     </span>

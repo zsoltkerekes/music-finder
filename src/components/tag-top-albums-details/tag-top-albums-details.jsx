@@ -107,7 +107,8 @@ export class TagTopAlbumsDetails extends Component {
               {
                 this.albums().map(
                   (album, index) =>
-                    (<Link to={escape(`/album-details/${album.artist.name}/${album.name}`)} key={index}>
+                    (<Link to={'/album-details/' + encodeURIComponent(album.artist.name) +
+                    '/' + encodeURIComponent(album.name)} key={index}>
                       <span className="artist">
                         <img
                           src={this.imageSrc(album)}

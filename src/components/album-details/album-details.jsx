@@ -84,7 +84,7 @@ export class AlbumDetails extends Component {
                   <h4>Tags</h4>
                   {this.state.result.album.tags.tag
                     .map((tag, index) =>
-                      (<Link to={'/tag-details/' + escape(tag.name)} key={index}>
+                      (<Link to={'/tag-details/' + encodeURIComponent(tag.name)} key={index}>
                         <span>[ {tag.name} ]</span>
                       </Link>)
                     )}
