@@ -5,22 +5,22 @@ API key	468ede76a78690130e40cf4be9c6e11e
 Shared secret	e2769daea69c2604c2216d3413cb9a0c
 Registered to	zsoltkerekes
 
-API Endpointhttp://ws.audioscrobbler.com/2.0/
-API Portal / Home Pagehttp://www.last.fm/api
+API Endpointhttps://ws.audioscrobbler.com/2.0/
+API Portal / Home Pagehttps://www.last.fm/api
 Primary CategoryMusic
 API ProviderLast.fm
 SSL SupportNo
-API Forum / Message Boardshttp://www.last.fm/group/Last.fm+Web+Services/forum/21604
+API Forum / Message Boardshttps://www.last.fm/group/Last.fm+Web+Services/forum/21604
 Support Email Addressoffice@last.fm
-Developer Support URLhttp://www.audioscrobbler.net/wiki/
+Developer Support URLhttps://www.audioscrobbler.net/wiki/
 Authentication ModelAPI Key, Shared Secret, Token
 Version2.0
-Terms Of Service URLhttp://www.last.fm/api/tos
+Terms Of Service URLhttps://www.last.fm/api/tos
 Is the API Design/Description Non-Proprietary ?Yes
 TypeWeb/Internet
 ScopeSingle purpose API
 Device SpecificNo
-Docs Home Page URLhttp://www.last.fm/api
+Docs Home Page URLhttps://www.last.fm/api
 Architectural StyleREST
 Supported Request FormatsURI Query String/CRUD
 Supported Response FormatsJSON, XML
@@ -32,60 +32,60 @@ example:
 
 Top Artists (done)
 
-http://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=chart.gettopartists&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Top Tracks 
 
-http://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=chart.gettoptracks&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Artist (done)
 
-http://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=artist.getinfo&artist=Cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Get Top Albums From Artist (done)
 
-http://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=artist.gettopalbums&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Get Top Tracks From Artist (done)
 
-http://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=artist.gettoptracks&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Artist and album (done)
 
-http://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=468ede76a78690130e40cf4be9c6e11e&artist=Cher&album=Believe&format=json
+https://ws.audioscrobbler.com/2.0/?method=album.getinfo&api_key=468ede76a78690130e40cf4be9c6e11e&artist=Cher&album=Believe&format=json
 
 Top Tags (done)
 
-http://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=tag.getTopTags&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Tags details (done)
 
-http://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=tag.getinfo&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Similar Tags ??? not seems to be working
 
-http://ws.audioscrobbler.com/2.0/?method=tag.getsimilar&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=tag.getsimilar&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Tags Top Artists (done)
 
-http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Tags Top Tracks (done)
 
-http://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=tag.gettoptracks&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Tags top albums (done)
 
-http://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
+https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
 Search Artist
 
-http://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=50
+https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=50
 
 Search Album
 
-http://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=50
+https://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=50
 
 Search Track
 
-http://ws.audioscrobbler.com/2.0/?method=track.search&track=Believe&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=100
+https://ws.audioscrobbler.com/2.0/?method=track.search&track=Believe&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=100

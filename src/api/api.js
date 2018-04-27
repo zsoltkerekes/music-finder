@@ -1,5 +1,5 @@
 
-const baseUrl = () => 'http://ws.audioscrobbler.com/2.0/?';
+const baseUrl = () => 'https://ws.audioscrobbler.com/2.0/?';
 
 const artistMethod = () => 'method=artist.getinfo';
 const topArtistMethod = () => 'method=chart.gettopartists';
