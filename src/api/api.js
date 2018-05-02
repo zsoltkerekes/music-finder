@@ -64,10 +64,10 @@ export const tagTopAlbums = (tag) =>
   `${baseUrl()}${tagTopAlbumsMethod()}${queryTag(tag)}${apiKey()}${format()}`;
 
 export const searchArtist = (artist) =>
-  `${baseUrl()}${searchArtistMethod()}${queryArtist(artist)}${apiKey()}${format()}${limit(50)}`;
+  `${baseUrl()}${searchArtistMethod()}${queryArtist(artist)}${apiKey()}${format()}${limit(100)}`;
 
 export const searchAlbums = (album) =>
-  `${baseUrl()}${searchAlbumMethod()}${queryAlbum(album)}${apiKey()}${format()}${limit(50)}`;
+  `${baseUrl()}${searchAlbumMethod()}${queryAlbum(album)}${apiKey()}${format()}${limit(100)}`;
 
 export const searchTracks = (track) =>
   `${baseUrl()}${searchTracksMethod()}${queryTrack(track)}${apiKey()}${format()}${limit(100)}`;

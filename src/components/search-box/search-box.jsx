@@ -1,32 +1,26 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 
-export class SearchBox extends Component {
-  constructor (props) {
-    super();
-  }
-
-  inputHandler = event => {
+export const SearchBox = (props) => {
+  const inputHandler = event => {
     if (event.key === 'Enter') {
-      this.props.setPhrase(event.target.value);
+      props.setPhrase(event.target.value);
     }
-  }
+  };
 
+  return (
+    <section className="searchBox">
+      <input
+        type="search"
+        name="search"
+        id="search"
+        placeholder="Type something here and press Enter to Start search.."
+        onKeyUp={(event) => inputHandler(event)}
+      />
+    </section>
+  );
+};
 
-  render () {
-    return (
-      <section className="searchBox">
-        <input
-          type="search"
-          name="search"
-          id="search"
-          placeholder="Type something here and press Enter to Start search.."
-          onKeyUp={(event) => this.inputHandler(event)}
-        />
-      </section>
-    );
-  }
-}
 
 SearchBox.propTypes = {
   setPhrase: PropTypes.func.isRequired

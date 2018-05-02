@@ -1,6 +1,7 @@
 $main-background-color: #cd5c5c;
 $secondary-background-color: #f5deb3;
 $main-color: #f5fffa;
+$alternate-color: rgba(200,200,200,0.5);
 /////////////
 @import url( 'https://fonts.googleapis.com/css?family=Bangers');
 
@@ -60,9 +61,20 @@ nav {
   position: fixed;
   top: 0;
   z-index: 200000;
+  @media (max-width: 960px) {
+    padding: 0;
+    width: 100%;
+  }
 
   h1 {
     float: left;
+    @media (max-width: 960px) {
+      float: none;
+      text-align: center;
+      margin: 0;
+      font-size: 1.5em;
+    }
+
   }
 
   .clear {
@@ -72,11 +84,25 @@ nav {
   ul {
     list-style: none;
     float: right;
+    @media (max-width: 960px) {
+      float: none;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+    }
 
     li {
       display: inline-block;
       padding: 1em;
       transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      @media (max-width: 400px) {
+        text-align: center;
+        padding: 2.5%;
+      }
+      @media (max-width: 320px) {
+        text-align: center;
+        padding: 1.5%;
+      }
 
       &:hover {
         transition: ease-in-out .3s background-color,ease-in-out .3s color;
@@ -103,18 +129,19 @@ h2 {
   display: block !important;
 }
 
-.toTop{
+.toTop {
   position: fixed;
   bottom: 1em;
   right: 1em;
   border: 2px solid $main-background-color;
   color: $main-background-color;
   background-color: $main-color;
-  padding: 0.5em 0.75em;
+  padding: .5em .75em;
   font-weight: bold;
   border-radius: 2em;
   cursor: pointer;
   transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
+
   &:hover {
     transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
     border: 2px solid $secondary-background-color;
@@ -128,6 +155,12 @@ h2 {
   margin: 0;
   text-align: center;
   padding: 2.5% 3.5% 3.5%;
+  @media (max-width:960px) {
+    width: 100%;
+    padding: 0;
+    max-height: 125vw;
+  overflow: scroll;
+  }
 
   .artist {
     position: relative;
@@ -141,6 +174,18 @@ h2 {
     border: 0 solid $main-background-color;
     background-color: $main-background-color;
     transition: ease-in-out .3s border,ease-in-out .3s transform;
+    @media (max-width:960px) {
+      width: calc( 100vw / 5 );
+    }
+    @media (max-width:768px) {
+      width: calc( 100vw / 4 );
+    }
+    @media (max-width:400px) {
+      width: calc( 100vw / 2 );
+    }
+    @media (max-width:320px) {
+      width: calc( 100vw / 1 );
+    }
 
     &:hover {
       border: .3em solid $main-background-color;
@@ -188,6 +233,11 @@ h2 {
   margin: 0;
   padding: 0 3.5%;
 
+  @media (max-width:960px) {
+    width: 100%;
+    padding: 0;
+  }
+
   a {
     span {
       padding: .5em;
@@ -214,6 +264,11 @@ h2 {
   div {
     min-height: calc(150px - 2em);
     padding: 1em 2em;
+
+    @media (max-width:960px) {
+      width: 95%;
+      padding: 2.5%;
+    }
 
     h3,
     h4 {
@@ -284,6 +339,13 @@ h2 {
   .artist {
     width: calc( 100vw / 6 );
     margin: 0;
+    @media (max-width:960px) {
+      width: calc( 100vw / 3.5 );
+    }
+
+    @media (max-width:960px) {
+      width: calc( 100vw / 1.5 );
+    }
 
     &:hover {
       font-size: 100%;
@@ -304,12 +366,24 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media (max-width:960px) {
+    font-size: 100%;
+    display: block;
+  }
 
   span {
     display: inline-block;
     padding: .2em .5em;
     transition: ease-in-out .3s background-color,ease-in-out .3s color;
     cursor: pointer;
+    @media (max-width:960px) {
+      padding: .25em;
+      display: block;
+
+      &:nth-child(even) {
+        background-color: $alternate-color;
+      }
+    }
 
     &:hover {
       transition: ease-in-out .3s background-color,ease-in-out .3s color;
@@ -369,11 +443,18 @@ h2 {
     display: inline-block;
     width: calc( 100% / 5);
     text-align: right;
+    @media (max-width:960px) {
+      display: block;
+      width: 90%;
+      padding: 1% 5%;
+      text-align: left;
+    }
   }
 }
 
 .tagDetails {
   @extend .artistDetails;
+
   div {
     min-height: 0;
   }
@@ -383,18 +464,27 @@ h2 {
   @extend .artistTopTracksDetails;
   max-height: none;
   font-size: 110%;
+  @media (max-width:960px) {
+    font-size: 100%;
+  }
 
   span {
     padding: .5em;
+
   }
 
 }
 
 .searchBox {
   text-align: center;
+
   input {
     text-align: center;
-    padding: 0.25em 1em;
+    padding: .25em 1em;
     width: 60%;
+    @media (max-width:960px) {
+      padding: 5%;
+      width: 90%;
+    }
   }
 }

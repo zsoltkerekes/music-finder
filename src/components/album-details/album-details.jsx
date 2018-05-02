@@ -123,7 +123,7 @@ export class AlbumDetails extends Component {
                 dangerouslySetInnerHTML={{
                   __html:
                     this.state.result.album.wiki.summary ?
-                      `${this.state.result.album.wiki.summary.slice(0, -25)}` : 'N/A'
+                      `${this.state.result.album.wiki.summary}` : 'N/A'
                 }} />
               <div
                 id="content"
@@ -131,7 +131,7 @@ export class AlbumDetails extends Component {
                 dangerouslySetInnerHTML={{
                   __html:
                     this.state.result.album.wiki.content ?
-                      `${this.state.result.album.wiki.content.slice(0, -130)}` : 'N/A'
+                      `${this.state.result.album.wiki.content}` : 'N/A'
                 }} />
               {this.state.result.album.wiki.content &&
                 this.state.result.album.wiki.content.slice(0, -130) !== this.state.result.album.wiki.summary.slice(0, -25) ?

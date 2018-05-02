@@ -1,29 +1,23 @@
-import React, { Component } from 'react';
+import React from 'react';
 import PropTypes from 'prop-types';
 import { AlbumDetails } from './../../components/album-details/album-details';
 
 
-export class AlbumDetailsPage extends Component {
-  constructor (props) {
-    super();
-  }
+export const AlbumDetailsPage = props => {
+  document.title = 'Album || Music Finder';
+  document.documentElement.scrollTop = 0;
+  const { albumName } = props.match.params;
+  const { artistName } = props.match.params;
 
-  render () {
-    document.title = 'Album || Music Finder';
-    document.documentElement.scrollTop = 0;
-    const { albumName } = this.props.match.params;
-    const { artistName } = this.props.match.params;
-    return (
-      <section>
-        <h2>
-          Album Details
-        </h2>
-        <AlbumDetails albumName={albumName} artistName={artistName}/>
-
-      </section>
-    );
-  }
-}
+  return (
+    <section>
+      <h2>
+        Album Details
+      </h2>
+      <AlbumDetails albumName={albumName} artistName={artistName} />
+    </section>
+  );
+};
 
 AlbumDetailsPage.propTypes = {
   match: PropTypes.object.isRequired

@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { artistTopTracksData } from './../../models/artist-top-tracks.model';
 import { artistTopTracks } from './../../api/api';
+import { banned } from './../../models/banned.model';
 
 export class ArtistTopTracksDetails extends Component {
   constructor (props) {
@@ -27,11 +28,6 @@ export class ArtistTopTracksDetails extends Component {
     }
   };
 
-  banned = [
-    'Keresés', '(null)', 'Other', '0ther', 'Music', 'Zene', '<unknown>', 'converto.io', 'MusicDownloader',
-    'title', 'undefined'
-  ];
-
   tracks = () => this.state.result.toptracks.track
     .sort(
       (a, b) => {
@@ -46,9 +42,9 @@ export class ArtistTopTracksDetails extends Component {
           if ((element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '') !==
             array[index - 1].name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '')) &&
             element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '').length !== 0 &&
-            element.image[element.image.length - 1]['#text'].length > 0 &&
+            // element.image[element.image.length - 1]['#text'].length > 0 &&
             element.name.indexOf('Ismeretlen album') === -1 &&
-            this.banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
+            banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
             return true;
           }
         }

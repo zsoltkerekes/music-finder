@@ -1,7 +1,7 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export class ToTop extends Component {
-  toTop = () => {
+export const ToTop = () => {
+  const toTop = () => {
     const height = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
     const scrollVelocity = height * (1 / 60);
     const interval = setInterval(
@@ -12,11 +12,9 @@ export class ToTop extends Component {
           clearInterval(interval);
         }
       });
-  }
+  };
 
-  render () {
-    return (
-      <div className="toTop" onClick={this.toTop}>&#8593;</div>
-    );
-  }
-}
+  return (
+    <div className="toTop" onClick={toTop}>&#8593;</div>
+  );
+};

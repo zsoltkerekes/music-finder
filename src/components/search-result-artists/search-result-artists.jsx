@@ -33,37 +33,40 @@ export class SearchResultArtist extends Component {
     if (this.state.result.results.artistmatches.artist) {
       return (
         <HashRouter>
-          <div className="topArtists">
+          <div>
             <h2>
               Results for {'"' + this.props.phrase + '"'} in Artists
             </h2>
-            {this.state.result.results.artistmatches.artist.length > 0 ?
-              <span>
-                {this.state.result.results.artistmatches.artist
-                  .filter(
-                    artist => artist.image[artist.image.length - 1]['#text'] !== ''
-                  )
-                  .map(
-                    (artist, index) =>
-                      (<Link to={'/artist-details/' + encodeURIComponent(artist.name)} key={index}>
-                        <span className="artist">
-                          <img
-                            alt={artist.name}
-                            src={artist.image[artist.image.length - 1]['#text'] !== '' ?
-                              artist.image[artist.image.length - 1]['#text'] : 'assets/image/no-photo.jpg'} />
-                          <span>
-                            {artist.name}
+            <div className="topArtists">
+
+              {this.state.result.results.artistmatches.artist.length > 0 ?
+                <span>
+                  {this.state.result.results.artistmatches.artist
+                    .filter(
+                      artist => artist.image[artist.image.length - 1]['#text'] !== ''
+                    )
+                    .map(
+                      (artist, index) =>
+                        (<Link to={'/artist-details/' + encodeURIComponent(artist.name)} key={index}>
+                          <span className="artist">
+                            <img
+                              alt={artist.name}
+                              src={artist.image[artist.image.length - 1]['#text'] !== '' ?
+                                artist.image[artist.image.length - 1]['#text'] : 'assets/image/no-photo.jpg'} />
+                            <span>
+                              {artist.name}
+                            </span>
                           </span>
-                        </span>
-                      </Link>
-                      )
-                  )}
-              </span> :
-              <span>
-                <h3 className="text-center">
+                        </Link>
+                        )
+                    )}
+                </span> :
+                <span>
+                  <h3 className="text-center">
                   Nothing found
-                </h3>
-              </span>}
+                  </h3>
+                </span>}
+            </div>
           </div>
         </HashRouter>
       );

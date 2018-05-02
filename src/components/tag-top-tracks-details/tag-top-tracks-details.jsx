@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { tagTopTracksData } from './../../models/tag-top-tracks.model';
 import { tagTopTracks } from './../../api/api';
+import { banned } from './../../models/banned.model';
 
 export class TagTopTracksDetails extends Component {
   constructor (props) {
@@ -27,11 +28,6 @@ export class TagTopTracksDetails extends Component {
     }
   };
 
-  banned = [
-    // 'Keresés', '(null)', 'Other', '0ther', 'Music', 'Zene', '<unknown>', 'converto.io', 'MusicDownloader',
-    // 'title', 'undefined'
-  ];
-
   tracks = () => this.state.result.tracks.track
     .sort(
       (a, b) => {
@@ -48,7 +44,7 @@ export class TagTopTracksDetails extends Component {
             element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '').length !== 0 &&
             // element.image[element.image.length - 1]['#text'].length > 0 &&
             // element.name.indexOf('Ismeretlen album') === -1 &&
-            this.banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
+            banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
             return true;
           }
         }

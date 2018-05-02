@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { artistTopAlbumsData } from './../../models/artist-top-albums.model';
 import { artistTopAlbums } from './../../api/api';
 import { HashRouter, Link } from 'react-router-dom';
+import { banned } from './../../models/banned.model';
 
 export class ArtistTopAlbumsDetails extends Component {
   constructor (props) {
@@ -28,11 +29,6 @@ export class ArtistTopAlbumsDetails extends Component {
     }
   };
 
-  banned = [
-    'Keresés', '(null)', 'Other', '0ther', 'Music', 'Zene', '<unknown>', 'converto.io', 'MusicDownloader',
-    'title', 'undefined'
-  ];
-
   albums = () => this.state.result.topalbums.album
     .sort(
       (a, b) => {
@@ -49,7 +45,7 @@ export class ArtistTopAlbumsDetails extends Component {
             element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '').length !== 0 &&
           //  element.image[element.image.length - 1]['#text'].length > 0 &&
             element.name.indexOf('Ismeretlen album') === -1 &&
-            this.banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
+            banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
             return true;
           }
         }

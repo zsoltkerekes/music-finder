@@ -56,12 +56,12 @@ export class TagDetails extends Component {
               <div
                 id="summary"
                 className="htmlLike shown"
-                dangerouslySetInnerHTML={{ __html: `${this.state.result.tag.wiki.summary.slice(0, -25)}` }} /> : null}
+                dangerouslySetInnerHTML={{ __html: `${this.state.result.tag.wiki.summary}` }} /> : null}
             {this.state.result.tag.wiki.content ?
               <div
                 id="content"
                 className="htmlLike hidden"
-                dangerouslySetInnerHTML={{ __html: `${this.state.result.tag.wiki.content.slice(0, -130)}` }} /> : null}
+                dangerouslySetInnerHTML={{ __html: `${this.state.result.tag.wiki.content}` }} /> : null}
             {this.state.result.tag.wiki.content &&
             this.state.result.tag.wiki.content.slice(0, -130) !== this.state.result.tag.wiki.summary.slice(0, -25) ?
               <button id="showButton" onClick={this.showFullTag}>Show Full Info</button> : null}

@@ -49,17 +49,41 @@ nav {
   position: fixed;
   top: 0;
   z-index: 200000; }
+  @media (max-width: 960px) {
+    nav {
+      padding: 0;
+      width: 100%; } }
   nav h1 {
     float: left; }
+    @media (max-width: 960px) {
+      nav h1 {
+        float: none;
+        text-align: center;
+        margin: 0;
+        font-size: 1.5em; } }
   nav .clear {
     clear: both; }
   nav ul {
     list-style: none;
     float: right; }
+    @media (max-width: 960px) {
+      nav ul {
+        float: none;
+        text-align: center;
+        margin: 0;
+        padding: 0; } }
     nav ul li {
       display: inline-block;
       padding: 1em;
       transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+      @media (max-width: 400px) {
+        nav ul li {
+          text-align: center;
+          padding: 2.5%; } }
+      @media (max-width: 320px) {
+        nav ul li {
+          text-align: center;
+          padding: 1.5%; } }
       nav ul li:hover {
         transition: ease-in-out .3s background-color,ease-in-out .3s color;
         background-color: #f5fffa;
@@ -85,7 +109,7 @@ h2 {
   border: 2px solid #cd5c5c;
   color: #cd5c5c;
   background-color: #f5fffa;
-  padding: 0.5em 0.75em;
+  padding: .5em .75em;
   font-weight: bold;
   border-radius: 2em;
   cursor: pointer;
@@ -101,6 +125,12 @@ h2 {
   margin: 0;
   text-align: center;
   padding: 2.5% 3.5% 3.5%; }
+  @media (max-width: 960px) {
+    .topArtists, .artistTopAlbumsDetails {
+      width: 100%;
+      padding: 0;
+      max-height: 125vw;
+      overflow: scroll; } }
   .topArtists .artist, .artistTopAlbumsDetails .artist {
     position: relative;
     overflow: hidden;
@@ -113,6 +143,18 @@ h2 {
     border: 0 solid #cd5c5c;
     background-color: #cd5c5c;
     transition: ease-in-out .3s border,ease-in-out .3s transform; }
+    @media (max-width: 960px) {
+      .topArtists .artist, .artistTopAlbumsDetails .artist {
+        width: calc( 100vw / 5); } }
+    @media (max-width: 768px) {
+      .topArtists .artist, .artistTopAlbumsDetails .artist {
+        width: calc( 100vw / 4); } }
+    @media (max-width: 400px) {
+      .topArtists .artist, .artistTopAlbumsDetails .artist {
+        width: calc( 100vw / 2); } }
+    @media (max-width: 320px) {
+      .topArtists .artist, .artistTopAlbumsDetails .artist {
+        width: calc( 100vw / 1); } }
     .topArtists .artist:hover, .artistTopAlbumsDetails .artist:hover {
       border: 0.3em solid #cd5c5c;
       font-size: 60%;
@@ -147,6 +189,10 @@ h2 {
   width: 93%;
   margin: 0;
   padding: 0 3.5%; }
+  @media (max-width: 960px) {
+    .artistDetails, .albumDetails, .tagDetails {
+      width: 100%;
+      padding: 0; } }
   .artistDetails a span, .albumDetails a span, .tagDetails a span {
     padding: .5em;
     transition: ease-in-out .3s background-color,ease-in-out .3s color; }
@@ -165,6 +211,10 @@ h2 {
   .artistDetails div, .albumDetails div, .tagDetails div {
     min-height: calc(150px - 2em);
     padding: 1em 2em; }
+    @media (max-width: 960px) {
+      .artistDetails div, .albumDetails div, .tagDetails div {
+        width: 95%;
+        padding: 2.5%; } }
     .artistDetails div h3, .albumDetails div h3, .tagDetails div h3,
     .artistDetails div h4,
     .albumDetails div h4,
@@ -220,6 +270,12 @@ h2 {
   .artistTopAlbumsDetails .artist {
     width: calc( 100vw / 6);
     margin: 0; }
+    @media (max-width: 960px) {
+      .artistTopAlbumsDetails .artist {
+        width: calc( 100vw / 3.5); } }
+    @media (max-width: 960px) {
+      .artistTopAlbumsDetails .artist {
+        width: calc( 100vw / 1.5); } }
     .artistTopAlbumsDetails .artist:hover {
       font-size: 100%;
       transform: scale(1);
@@ -233,11 +289,21 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap; }
+  @media (max-width: 960px) {
+    .artistTopTracksDetails, .topTracksDetails {
+      font-size: 100%;
+      display: block; } }
   .artistTopTracksDetails span, .topTracksDetails span {
     display: inline-block;
     padding: .2em .5em;
     transition: ease-in-out .3s background-color,ease-in-out .3s color;
     cursor: pointer; }
+    @media (max-width: 960px) {
+      .artistTopTracksDetails span, .topTracksDetails span {
+        padding: .25em;
+        display: block; }
+        .artistTopTracksDetails span:nth-child(even), .topTracksDetails span:nth-child(even) {
+          background-color: rgba(200, 200, 200, 0.5); } }
     .artistTopTracksDetails span:hover, .topTracksDetails span:hover {
       transition: ease-in-out .3s background-color,ease-in-out .3s color;
       color: #f5fffa;
@@ -273,6 +339,12 @@ h2 {
   display: inline-block;
   width: calc( 100% / 5);
   text-align: right; }
+  @media (max-width: 960px) {
+    .topTags span {
+      display: block;
+      width: 90%;
+      padding: 1% 5%;
+      text-align: left; } }
 
 .tagDetails div {
   min-height: 0; }
@@ -280,6 +352,9 @@ h2 {
 .topTracksDetails {
   max-height: none;
   font-size: 110%; }
+  @media (max-width: 960px) {
+    .topTracksDetails {
+      font-size: 100%; } }
   .topTracksDetails span {
     padding: .5em; }
 
@@ -287,5 +362,9 @@ h2 {
   text-align: center; }
   .searchBox input {
     text-align: center;
-    padding: 0.25em 1em;
+    padding: .25em 1em;
     width: 60%; }
+    @media (max-width: 960px) {
+      .searchBox input {
+        padding: 5%;
+        width: 90%; } }

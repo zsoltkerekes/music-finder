@@ -108,13 +108,13 @@ export class ArtistDetails extends Component {
                 <div
                   id="summary"
                   className="htmlLike shown"
-                  dangerouslySetInnerHTML={{ __html: `${this.state.result.artist.bio.summary.slice(0, -24)}` }} /> :
+                  dangerouslySetInnerHTML={{ __html: `${this.state.result.artist.bio.summary}` }} /> :
                 null}
               {this.state.result.artist.bio.content ?
                 <div
                   id="content"
                   className="htmlLike hidden"
-                  dangerouslySetInnerHTML={{ __html: `${this.state.result.artist.bio.content.slice(0, -130)}` }} /> :
+                  dangerouslySetInnerHTML={{ __html: `${this.state.result.artist.bio.content}` }} /> :
                 null}
               {this.state.result.artist.bio.content &&
                 this.state.result.artist.bio.content.slice(0, -130) !== this.state.result.artist.bio.summary.slice(0, -25) ?

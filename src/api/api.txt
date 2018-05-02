@@ -78,14 +78,14 @@ Tags top albums (done)
 
 https://ws.audioscrobbler.com/2.0/?method=tag.gettopalbums&tag=disco&api_key=468ede76a78690130e40cf4be9c6e11e&format=json
 
-Search Artist
+Search Artist (done)
 
 https://ws.audioscrobbler.com/2.0/?method=artist.search&artist=cher&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=50
 
-Search Album
+Search Album (done)
 
 https://ws.audioscrobbler.com/2.0/?method=album.search&album=believe&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=50
 
-Search Track
+Search Track (done)
 
 https://ws.audioscrobbler.com/2.0/?method=track.search&track=Believe&api_key=468ede76a78690130e40cf4be9c6e11e&format=json&limit=100
