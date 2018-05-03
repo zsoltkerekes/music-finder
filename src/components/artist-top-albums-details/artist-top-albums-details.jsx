@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { artistTopAlbumsData } from './../../models/artist-top-albums.model';
-import { artistTopAlbums } from './../../api/api';
+import { artistTopAlbums, imageSrc } from './../../api/api';
 import { HashRouter, Link } from 'react-router-dom';
 import { banned } from './../../models/banned.model';
 
@@ -43,7 +43,6 @@ export class ArtistTopAlbumsDetails extends Component {
           if ((element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '') !==
             array[index - 1].name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '')) &&
             element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '').length !== 0 &&
-          //  element.image[element.image.length - 1]['#text'].length > 0 &&
             element.name.indexOf('Ismeretlen album') === -1 &&
             banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
             return true;
@@ -77,15 +76,6 @@ export class ArtistTopAlbumsDetails extends Component {
       }
     );
 
-  imageSrc = album => {
-    const image = album.image[album.image.length - 1]['#text'];
-    if (image !== '') {
-      return image;
-    } else {
-      return 'assets/image/no-photo.jpg';
-    }
-  }
-
   scroll = event => {
     event.preventDefault();
     document.getElementsByClassName('artistTopAlbumsDetails')[0].scrollLeft += event.deltaY / 2;
@@ -107,7 +97,7 @@ export class ArtistTopAlbumsDetails extends Component {
                     encodeURIComponent(album.name)} key={index}>
                       <span className="artist">
                         <img
-                          src={this.imageSrc(album)}
+                          src={imageSrc(album)}
                           alt={album.name}
                           className="albumPic" />
                         <span>

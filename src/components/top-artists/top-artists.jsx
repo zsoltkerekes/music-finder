@@ -31,7 +31,8 @@ export class TopArtist extends Component {
                   <span className="artist">
                     <img
                       alt={artist.name}
-                      src={artist.image[artist.image.length - 1]['#text']} />
+                      src={artist.image[artist.image.length - 3] ?
+                        artist.image[artist.image.length - 3]['#text'] : 'assets/image/loading.gif'} />
                     <span>
                       {artist.name}
                     </span>
@@ -45,10 +46,10 @@ export class TopArtist extends Component {
     } else {
       return (
         <section className="topArtists noFlex">
-          <br/>
-          <br/>
-          <br/>
-          <br/>
+          <br />
+          <br />
+          <br />
+          <br />
           <p>Loading...</p>
           <p>{this.state.result.error ? 'ERROR : ' + this.state.result.error : ''} </p>
           <p>{this.state.result.message ? 'ERROR MESSAGE : ' + this.state.result.message : ''}</p>

@@ -145,10 +145,11 @@ h2 {
     transition: ease-in-out .3s border,ease-in-out .3s transform; }
     @media (max-width: 960px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 5); } }
+        width: calc( 100vw / 4);
+        font-size: 80%; } }
     @media (max-width: 768px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 4); } }
+        width: calc( 100vw / 3); } }
     @media (max-width: 400px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
         width: calc( 100vw / 2); } }
@@ -162,6 +163,10 @@ h2 {
       z-index: 1000;
       transform: scale(1.7);
       margin: -0.75em 0 -0.25em; }
+      @media (max-width: 960px) {
+        .topArtists .artist:hover, .artistTopAlbumsDetails .artist:hover {
+          transform: scale(1);
+          font-size: 80%; } }
       .topArtists .artist:hover span, .artistTopAlbumsDetails .artist:hover span {
         border: 0.3em solid #cd5c5c;
         bottom: -0.3em;
@@ -184,6 +189,11 @@ h2 {
       height: auto;
       width: auto;
       max-width: 100%; }
+      @media (max-width: 960px) {
+        .topArtists .artist span, .artistTopAlbumsDetails .artist span {
+          bottom: 0;
+          right: 0;
+          border: 0.3em solid #cd5c5c; } }
 
 .artistDetails, .albumDetails, .tagDetails {
   width: 93%;
@@ -192,10 +202,14 @@ h2 {
   @media (max-width: 960px) {
     .artistDetails, .albumDetails, .tagDetails {
       width: 100%;
-      padding: 0; } }
+      padding: 0;
+      text-align: center; } }
   .artistDetails a span, .albumDetails a span, .tagDetails a span {
     padding: .5em;
     transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+    @media (max-width: 960px) {
+      .artistDetails a span, .albumDetails a span, .tagDetails a span {
+        display: inline-block; } }
     .artistDetails a span:hover, .albumDetails a span:hover, .tagDetails a span:hover {
       transition: ease-in-out .3s background-color,ease-in-out .3s color;
       color: #f5fffa;
@@ -208,6 +222,13 @@ h2 {
     margin: 2em 10em 0 2em;
     border: 0.3em solid #f5fffa;
     box-sizing: border-box; }
+    @media (max-width: 960px) {
+      .artistDetails .profilePic, .albumDetails .profilePic, .tagDetails .profilePic {
+        float: none;
+        margin: 0;
+        max-width: 320px;
+        width: 100%;
+        height: auto; } }
   .artistDetails div, .albumDetails div, .tagDetails div {
     min-height: calc(150px - 2em);
     padding: 1em 2em; }
@@ -221,10 +242,20 @@ h2 {
     .tagDetails div h4 {
       margin: .5em 0;
       padding: 0; }
+      @media (max-width: 960px) {
+        .artistDetails div h3, .albumDetails div h3, .tagDetails div h3,
+        .artistDetails div h4,
+        .albumDetails div h4,
+        .tagDetails div h4 {
+          margin: 2em 1em 0em 1em; } }
   .artistDetails .upper, .albumDetails .upper, .tagDetails .upper {
     background: #f5deb3;
     min-height: calc(150px - 2em);
     padding: 1em 2em; }
+    @media (max-width: 960px) {
+      .artistDetails .upper, .albumDetails .upper, .tagDetails .upper {
+        padding: 0;
+        min-height: 0; } }
     .artistDetails .upper h3, .albumDetails .upper h3, .tagDetails .upper h3 {
       font-size: 200%;
       margin: .25em 0; }
@@ -252,6 +283,9 @@ h2 {
       margin-left: calc( 50% - 6em);
       cursor: pointer;
       transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+      @media (max-width: 960px) {
+        .artistDetails .bio button, .albumDetails .bio button, .tagDetails .bio button {
+          margin: 1em auto; } }
       .artistDetails .bio button:hover, .albumDetails .bio button:hover, .tagDetails .bio button:hover {
         transition: ease-in-out .3s background-color,ease-in-out .3s color;
         background-color: #f5deb3;

@@ -27,6 +27,15 @@ const page = (option = 1) => `&page=${option}`;
 const apiKey = () => '&api_key=468ede76a78690130e40cf4be9c6e11e';
 const format = () => '&format=json';
 
+export const imageSrc = album => {
+  const image = album.image[album.image.length - 2];
+  if (image && image['#text'] !== '') {
+    return image['#text'];
+  } else {
+    return 'assets/image/no-photo.jpg';
+  }
+};
+
 export const artistDetails = artist =>
   artist ? `${baseUrl()}${artistMethod()}${queryArtist(artist)}${apiKey()}${format()}${autocorrect()}` : null;
 

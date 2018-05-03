@@ -54,7 +54,8 @@ export class ArtistDetails extends Component {
           <div>
 
             <img
-              src={this.state.result.artist.image[this.state.result.artist.image.length - 1]['#text'] ||
+              src={this.state.result.artist.image[this.state.result.artist.image.length - 3] ?
+                this.state.result.artist.image[this.state.result.artist.image.length - 3]['#text'] :
                 'assets/image/no-photo.jpg'}
               alt={this.state.result.artist.name}
               className="profilePic" />

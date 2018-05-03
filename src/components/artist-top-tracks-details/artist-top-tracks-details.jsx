@@ -42,7 +42,6 @@ export class ArtistTopTracksDetails extends Component {
           if ((element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '') !==
             array[index - 1].name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '')) &&
             element.name.replace(/[^bcdfghjklmnpqrstvwxyz]/ig, '').length !== 0 &&
-            // element.image[element.image.length - 1]['#text'].length > 0 &&
             element.name.indexOf('Ismeretlen album') === -1 &&
             banned.findIndex(name => name.toUpperCase() === element.name.toUpperCase()) === -1) {
             return true;

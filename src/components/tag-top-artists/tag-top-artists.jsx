@@ -44,8 +44,8 @@ export class TagTopArtist extends Component {
                     <span className="artist">
                       <img
                         alt={artist.name}
-                        src={artist.image[artist.image.length - 1]['#text'] !== '' ?
-                          artist.image[artist.image.length - 1]['#text'] : 'assets/image/no-photo.jpg'} />
+                        src={artist.image[artist.image.length - 2] ?
+                          artist.image[artist.image.length - 2]['#text'] : 'assets/image/no-photo.jpg'} />
                       <span>
                         {artist.name}
                       </span>

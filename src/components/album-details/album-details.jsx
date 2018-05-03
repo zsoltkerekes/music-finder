@@ -62,8 +62,8 @@ export class AlbumDetails extends Component {
           <div>
 
             <img
-              src={this.state.result.album.image[this.state.result.album.image.length - 1]['#text'] ||
-                'assets/image/no-photo.jpg'}
+              src={this.state.result.album.image[this.state.result.album.image.length - 3] ?
+                this.state.result.album.image[this.state.result.album.image.length - 3]['#text'] : 'assets/image/no-photo.jpg'}
               alt={this.state.result.album.name}
               className="profilePic" />
 
