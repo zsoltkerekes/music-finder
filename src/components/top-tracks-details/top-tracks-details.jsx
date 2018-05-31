@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
 import { tagTopTracksData } from './../../models/tag-top-tracks.model';
 import { topTracks } from './../../api/api';
 
 export class TopTracksDetails extends Component {
-  constructor (props) {
+  constructor () {
     super();
     this.state = {
       result: { ...tagTopTracksData }
@@ -12,7 +11,7 @@ export class TopTracksDetails extends Component {
     this.getContent(topTracks());
   }
 
-  componentWillReceiveProps (props) {
+  componentWillReceiveProps () {
     this.setState({
       result: { ...tagTopTracksData }
     });
@@ -62,7 +61,3 @@ export class TopTracksDetails extends Component {
     }
   }
 }
-
-TopTracksDetails.propTypes = {
-  tagName: PropTypes.string.isRequired
-};

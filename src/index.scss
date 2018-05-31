@@ -1,9 +1,9 @@
 $main-background-color: #cd5c5c;
 $secondary-background-color: #f5deb3;
 $main-color: #f5fffa;
-$alternate-color: rgba(200,200,200,0.5);
+$alternate-color: rgba(200, 200, 200, 0.5);
 /////////////
-@import url( 'https://fonts.googleapis.com/css?family=Bangers');
+@import url('https://fonts.googleapis.com/css?family=Bangers');
 
 html {
   position: relative;
@@ -94,7 +94,7 @@ nav {
     li {
       display: inline-block;
       padding: 1em;
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
       @media (max-width: 400px) {
         text-align: center;
         padding: 2.5%;
@@ -105,7 +105,7 @@ nav {
       }
 
       &:hover {
-        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        transition: ease-in-out .3s background-color, ease-in-out .3s color;
         background-color: $main-color;
         color: $main-background-color;
       }
@@ -140,22 +140,23 @@ h2 {
   font-weight: bold;
   border-radius: 2em;
   cursor: pointer;
-  transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
+  transition: ease-in-out .3s background-color, ease-in-out .3s color, ease-in-out .3s border;
 
   &:hover {
-    transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
+    transition: ease-in-out .3s background-color, ease-in-out .3s color, ease-in-out .3s border;
     border: 2px solid $secondary-background-color;
     color: $secondary-background-color;
     background-color: $main-background-color;
   }
 }
+
 ///////////////////////
 .topArtists {
   width: 93%;
   margin: 0;
   text-align: center;
   padding: 2.5% 3.5% 3.5%;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     width: 100%;
     padding: 0;
     max-height: 125vw;
@@ -173,29 +174,29 @@ h2 {
     box-sizing: border-box;
     border: 0 solid $main-background-color;
     background-color: $main-background-color;
-    transition: ease-in-out .3s border,ease-in-out .3s transform;
-    @media (max-width:960px) {
-      width: calc( 100vw / 4 );
+    transition: ease-in-out .3s border, ease-in-out .3s transform;
+    @media (max-width: 960px) {
+      width: calc(100vw / 4);
       font-size: 80%;
     }
-    @media (max-width:768px) {
-      width: calc( 100vw / 3 );
+    @media (max-width: 768px) {
+      width: calc(100vw / 3);
     }
-    @media (max-width:400px) {
-      width: calc( 100vw / 2 );
+    @media (max-width: 400px) {
+      width: calc(100vw / 2);
     }
-    @media (max-width:320px) {
-      width: calc( 100vw / 1 );
+    @media (max-width: 320px) {
+      width: calc(100vw / 1);
     }
 
     &:hover {
       border: .3em solid $main-background-color;
       font-size: 60%;
-      transition: ease-in-out .3s border,ease-in-out .3s transform;
+      transition: ease-in-out .3s border, ease-in-out .3s transform;
       z-index: 1000;
       transform: scale(1.7);
       margin: -0.75em 0 -0.25em;
-      @media (max-width:960px) {
+      @media (max-width: 960px) {
         transform: scale(1.0);
         font-size: 80%;
       }
@@ -228,7 +229,7 @@ h2 {
       height: auto;
       width: auto;
       max-width: 100%;
-      @media (max-width:960px) {
+      @media (max-width: 960px) {
         bottom: 0;
         right: 0;
         border: .3em solid $main-background-color;
@@ -242,7 +243,7 @@ h2 {
   width: 93%;
   margin: 0;
   padding: 0 3.5%;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     width: 100%;
     padding: 0;
     text-align: center;
@@ -251,14 +252,14 @@ h2 {
   a {
     span {
       padding: .5em;
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
-      @media (max-width:960px) {
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
+      @media (max-width: 960px) {
 
         display: inline-block;
       }
 
       &:hover {
-        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        transition: ease-in-out .3s background-color, ease-in-out .3s color;
         color: $main-color;
         background-color: $main-background-color;
       }
@@ -273,7 +274,7 @@ h2 {
     margin: 2em 10em 0 2em;
     border: .3em solid $main-color;
     box-sizing: border-box;
-    @media (max-width:960px) {
+    @media (max-width: 960px) {
       float: none;
       margin: 0;
       max-width: 320px;
@@ -285,7 +286,7 @@ h2 {
   div {
     min-height: calc(150px - 2em);
     padding: 1em 2em;
-    @media (max-width:960px) {
+    @media (max-width: 960px) {
       width: 95%;
       padding: 2.5%;
     }
@@ -293,8 +294,8 @@ h2 {
     h3,
     h4 {
       margin: .5em 0;
-      padding: 0; 
-      @media (max-width:960px) {
+      padding: 0;
+      @media (max-width: 960px) {
         margin: 2em 1em 0em 1em;
       }
     }
@@ -304,7 +305,7 @@ h2 {
     background: $secondary-background-color;
     min-height: calc(150px - 2em);
     padding: 1em 2em;
-    @media (max-width:960px) {
+    @media (max-width: 960px) {
       padding: 0;
       min-height: 0;
     }
@@ -339,15 +340,15 @@ h2 {
       width: 12em;
       padding: 1em;
       margin-top: 2em;
-      margin-left: calc( 50% - 6em );
+      margin-left: calc(50% - 6em);
       cursor: pointer;
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
-      @media (max-width:960px) {
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
+      @media (max-width: 960px) {
         margin: 1em auto;
       }
 
       &:hover {
-        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        transition: ease-in-out .3s background-color, ease-in-out .3s color;
         background-color: $secondary-background-color;
         color: $main-background-color;
       }
@@ -367,13 +368,13 @@ h2 {
   transform: scale(1.0);
 
   .artist {
-    width: calc( 100vw / 6 );
+    width: calc(100vw / 6);
     margin: 0;
-    @media (max-width:960px) {
-      width: calc( 100vw / 3.5 );
+    @media (max-width: 960px) {
+      width: calc(100vw / 3.5);
     }
-    @media (max-width:960px) {
-      width: calc( 100vw / 1.5 );
+    @media (max-width: 960px) {
+      width: calc(100vw / 1.5);
     }
 
     &:hover {
@@ -384,7 +385,9 @@ h2 {
   }
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch;
-};
+}
+
+;
 
 .artistTopTracksDetails {
   width: 93%;
@@ -395,7 +398,7 @@ h2 {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     font-size: 100%;
     display: block;
   }
@@ -403,9 +406,9 @@ h2 {
   span {
     display: inline-block;
     padding: .2em .5em;
-    transition: ease-in-out .3s background-color,ease-in-out .3s color;
+    transition: ease-in-out .3s background-color, ease-in-out .3s color;
     cursor: pointer;
-    @media (max-width:960px) {
+    @media (max-width: 960px) {
       padding: .25em;
       display: block;
 
@@ -415,7 +418,7 @@ h2 {
     }
 
     &:hover {
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
       color: $main-color;
       background-color: $main-background-color;
     }
@@ -435,10 +438,10 @@ h2 {
         font-size: 200%;
         padding: .25em;
         cursor: pointer;
-        transition: ease-in-out .6s background-color,ease-in-out .3s color;
+        transition: ease-in-out .6s background-color, ease-in-out .3s color;
 
         &:hover {
-          transition: ease-in-out .6s background-color,ease-in-out .3s color;
+          transition: ease-in-out .6s background-color, ease-in-out .3s color;
           background-color: $main-background-color;
           color: $secondary-background-color;
         }
@@ -454,10 +457,10 @@ h2 {
 
       li {
         padding: .15em;
-        transition: ease-in-out .6s background-color,ease-in-out .3s color;
+        transition: ease-in-out .6s background-color, ease-in-out .3s color;
 
         &:hover {
-          transition: ease-in-out .3s background-color,ease-in-out .3s color;
+          transition: ease-in-out .3s background-color, ease-in-out .3s color;
           background-color: $main-background-color;
           color: $main-color;
         }
@@ -468,11 +471,12 @@ h2 {
 
 .topTags {
   span {
-    padding: .25em;
+    padding: .5em 0em;
     display: inline-block;
-    width: calc( 100% / 5);
-    text-align: right;
-    @media (max-width:960px) {
+    width: calc(100% / 5);
+    text-align: center;
+    text-decoration: underline;
+    @media (max-width: 960px) {
       display: block;
       width: 90%;
       padding: 1% 5%;
@@ -493,12 +497,13 @@ h2 {
   @extend .artistTopTracksDetails;
   max-height: none;
   font-size: 110%;
-  @media (max-width:960px) {
+  @media (max-width: 960px) {
     font-size: 100%;
   }
 
   span {
-    padding: .5em;
+    padding: 0.25em .5em;
+    text-decoration: underline;
 
   }
 
@@ -511,7 +516,7 @@ h2 {
     text-align: center;
     padding: .25em 1em;
     width: 60%;
-    @media (max-width:960px) {
+    @media (max-width: 960px) {
       padding: 5%;
       width: 90%;
     }

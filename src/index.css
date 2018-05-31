@@ -75,7 +75,7 @@ nav {
     nav ul li {
       display: inline-block;
       padding: 1em;
-      transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+      transition: ease-in-out .3s background-color, ease-in-out .3s color; }
       @media (max-width: 400px) {
         nav ul li {
           text-align: center;
@@ -85,7 +85,7 @@ nav {
           text-align: center;
           padding: 1.5%; } }
       nav ul li:hover {
-        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        transition: ease-in-out .3s background-color, ease-in-out .3s color;
         background-color: #f5fffa;
         color: #cd5c5c; }
 
@@ -113,9 +113,9 @@ h2 {
   font-weight: bold;
   border-radius: 2em;
   cursor: pointer;
-  transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border; }
+  transition: ease-in-out .3s background-color, ease-in-out .3s color, ease-in-out .3s border; }
   .toTop:hover {
-    transition: ease-in-out .3s background-color,ease-in-out .3s color, ease-in-out .3s border;
+    transition: ease-in-out .3s background-color, ease-in-out .3s color, ease-in-out .3s border;
     border: 2px solid #f5deb3;
     color: #f5deb3;
     background-color: #cd5c5c; }
@@ -142,24 +142,24 @@ h2 {
     box-sizing: border-box;
     border: 0 solid #cd5c5c;
     background-color: #cd5c5c;
-    transition: ease-in-out .3s border,ease-in-out .3s transform; }
+    transition: ease-in-out .3s border, ease-in-out .3s transform; }
     @media (max-width: 960px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 4);
+        width: calc(100vw / 4);
         font-size: 80%; } }
     @media (max-width: 768px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 3); } }
+        width: calc(100vw / 3); } }
     @media (max-width: 400px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 2); } }
+        width: calc(100vw / 2); } }
     @media (max-width: 320px) {
       .topArtists .artist, .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 1); } }
+        width: calc(100vw / 1); } }
     .topArtists .artist:hover, .artistTopAlbumsDetails .artist:hover {
       border: 0.3em solid #cd5c5c;
       font-size: 60%;
-      transition: ease-in-out .3s border,ease-in-out .3s transform;
+      transition: ease-in-out .3s border, ease-in-out .3s transform;
       z-index: 1000;
       transform: scale(1.7);
       margin: -0.75em 0 -0.25em; }
@@ -206,12 +206,12 @@ h2 {
       text-align: center; } }
   .artistDetails a span, .albumDetails a span, .tagDetails a span {
     padding: .5em;
-    transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+    transition: ease-in-out .3s background-color, ease-in-out .3s color; }
     @media (max-width: 960px) {
       .artistDetails a span, .albumDetails a span, .tagDetails a span {
         display: inline-block; } }
     .artistDetails a span:hover, .albumDetails a span:hover, .tagDetails a span:hover {
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
       color: #f5fffa;
       background-color: #cd5c5c; }
   .artistDetails .profilePic, .albumDetails .profilePic, .tagDetails .profilePic {
@@ -280,14 +280,14 @@ h2 {
       width: 12em;
       padding: 1em;
       margin-top: 2em;
-      margin-left: calc( 50% - 6em);
+      margin-left: calc(50% - 6em);
       cursor: pointer;
-      transition: ease-in-out .3s background-color,ease-in-out .3s color; }
+      transition: ease-in-out .3s background-color, ease-in-out .3s color; }
       @media (max-width: 960px) {
         .artistDetails .bio button, .albumDetails .bio button, .tagDetails .bio button {
           margin: 1em auto; } }
       .artistDetails .bio button:hover, .albumDetails .bio button:hover, .tagDetails .bio button:hover {
-        transition: ease-in-out .3s background-color,ease-in-out .3s color;
+        transition: ease-in-out .3s background-color, ease-in-out .3s color;
         background-color: #f5deb3;
         color: #cd5c5c; }
 
@@ -302,14 +302,14 @@ h2 {
   overflow-x: scroll;
   -webkit-overflow-scrolling: touch; }
   .artistTopAlbumsDetails .artist {
-    width: calc( 100vw / 6);
+    width: calc(100vw / 6);
     margin: 0; }
     @media (max-width: 960px) {
       .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 3.5); } }
+        width: calc(100vw / 3.5); } }
     @media (max-width: 960px) {
       .artistTopAlbumsDetails .artist {
-        width: calc( 100vw / 1.5); } }
+        width: calc(100vw / 1.5); } }
     .artistTopAlbumsDetails .artist:hover {
       font-size: 100%;
       transform: scale(1);
@@ -330,7 +330,7 @@ h2 {
   .artistTopTracksDetails span, .topTracksDetails span {
     display: inline-block;
     padding: .2em .5em;
-    transition: ease-in-out .3s background-color,ease-in-out .3s color;
+    transition: ease-in-out .3s background-color, ease-in-out .3s color;
     cursor: pointer; }
     @media (max-width: 960px) {
       .artistTopTracksDetails span, .topTracksDetails span {
@@ -339,7 +339,7 @@ h2 {
         .artistTopTracksDetails span:nth-child(even), .topTracksDetails span:nth-child(even) {
           background-color: rgba(200, 200, 200, 0.5); } }
     .artistTopTracksDetails span:hover, .topTracksDetails span:hover {
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
       color: #f5fffa;
       background-color: #cd5c5c; }
 
@@ -350,9 +350,9 @@ h2 {
   font-size: 200%;
   padding: .25em;
   cursor: pointer;
-  transition: ease-in-out .6s background-color,ease-in-out .3s color; }
+  transition: ease-in-out .6s background-color, ease-in-out .3s color; }
   .albumDetails .upper span:last-child:hover {
-    transition: ease-in-out .6s background-color,ease-in-out .3s color;
+    transition: ease-in-out .6s background-color, ease-in-out .3s color;
     background-color: #cd5c5c;
     color: #f5deb3; }
 
@@ -362,17 +362,18 @@ h2 {
   cursor: pointer; }
   .albumDetails .tracks ol li {
     padding: .15em;
-    transition: ease-in-out .6s background-color,ease-in-out .3s color; }
+    transition: ease-in-out .6s background-color, ease-in-out .3s color; }
     .albumDetails .tracks ol li:hover {
-      transition: ease-in-out .3s background-color,ease-in-out .3s color;
+      transition: ease-in-out .3s background-color, ease-in-out .3s color;
       background-color: #cd5c5c;
       color: #f5fffa; }
 
 .topTags span {
-  padding: .25em;
+  padding: .5em 0em;
   display: inline-block;
-  width: calc( 100% / 5);
-  text-align: right; }
+  width: calc(100% / 5);
+  text-align: center;
+  text-decoration: underline; }
   @media (max-width: 960px) {
     .topTags span {
       display: block;
@@ -390,7 +391,8 @@ h2 {
     .topTracksDetails {
       font-size: 100%; } }
   .topTracksDetails span {
-    padding: .5em; }
+    padding: 0.25em .5em;
+    text-decoration: underline; }
 
 .searchBox {
   text-align: center; }

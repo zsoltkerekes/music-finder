@@ -29,18 +29,22 @@ export class TagDetails extends Component {
   }
 
   showFullTag = () => {
-    document.getElementById('summary').className = 'htmlLike hidden';
-    document.getElementById('content').className = 'htmlLike shown';
-    document.getElementById('showButton').className = 'hidden';
-    document.getElementById('hideButton').className = 'shown';
+    if (document.getElementById('summary') && document.getElementById('showButton')) {
+      document.getElementById('summary').className = 'htmlLike hidden';
+      document.getElementById('content').className = 'htmlLike shown';
+      document.getElementById('showButton').className = 'hidden';
+      document.getElementById('hideButton').className = 'shown';
+    }
   }
 
   hideFullTag = () => {
-    document.getElementById('content').className = 'htmlLike hidden';
-    document.getElementById('summary').className = 'htmlLike shown';
-    document.getElementById('showButton').className = 'shown';
-    document.getElementById('hideButton').className = 'hidden';
-    document.documentElement.scrollTop = 0;
+    if (document.getElementById('content') && document.getElementById('hideButton')) {
+      document.getElementById('content').className = 'htmlLike hidden';
+      document.getElementById('summary').className = 'htmlLike shown';
+      document.getElementById('showButton').className = 'shown';
+      document.getElementById('hideButton').className = 'hidden';
+      document.documentElement.scrollTop = 0;
+    }
   }
 
   render () {
